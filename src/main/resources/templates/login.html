@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Login page</title>
+    <link rel="stylesheet" href="../static/bootstrap/css/bootstrap.min.css"
+          th:href="@{bootstrap/css/bootstrap.min.css}"/>
+</head>
+<body>
+<p>
+<div class="container">
+    <h1>Login</h1>
+    <br/>
+    <div th:if="${error} !=null" th:text="${error}"></div>
+    <form method="post">
+        <div class="form-group row">
+            <label class="form-control-label" for="inputUsername" >User Name</label>
+            <input type="text" class="form-control" id="inputUsername" name="username"/>
+        </div>
+        <div class="form-group row">
+            <label class="form-control-label" for="inputPassword" >Password</label>
+            <input type="password" class="form-control" id="inputPassword" name="password"/>
+        </div>
+        <input type="submit" class="btn btn-primary" value="Log In">
+    </form>
+</div>
+</p>
+<script th:src="@{/jquery/jquery.min.js}"></script>
+<script th:src="@{/bootstrap/js/tether.min.js}"></script>
+<script th:src="@{/bootstrap/js/bootstrap.min.js}"></script>
+</body>
+</html>
